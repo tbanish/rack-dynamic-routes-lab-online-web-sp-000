@@ -9,15 +9,7 @@ class Application
     search_term = req.params["q"]
     
     if req.path.match(/items/)
-      @@items.each do |i|
-        if @@items.include?(i)
-          resp.write "#{i.price}"
-          binding.pry
-        elsif !@@items.include?(i)
-          resp.write "Item not found"
-          resp.status = 400
-        end
-      end
+      
       
     else
       resp.write "Route not found"
