@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     
-    
+    search_term = req.params["item"]
     
     if req.path.match(/items/)
       @@items.each do |i|
