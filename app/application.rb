@@ -6,10 +6,12 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     
-    search_term = req.params["q"]
-    
     if req.path.match(/items/)
       
+      item = req.path.split("/items/").last
+      song = @@songs.find{|s| s.title == song_title}
+ 
+      resp.write song.artist
       
     else
       resp.write "Route not found"
