@@ -8,7 +8,7 @@ class Application
     
     if req.path.match(/items/)
       @@items.each do |i|
-        if @@items.include?(i)
+        if @@items.include?(i) && i == search_term
           resp.write "#{i.price}"
         elsif !@@items.include?(i)
           resp.write "Item not found"
