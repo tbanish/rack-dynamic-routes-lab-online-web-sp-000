@@ -1,6 +1,6 @@
 class Application
   
-  resp = Response::Rack
+  resp = Rack::Response.new
   
   def call(env)
     if req.path.match(/items/)
