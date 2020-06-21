@@ -6,7 +6,7 @@ class Application
     
     if req.path.match(/items/)
       @@items.each do |i|
-        resp.write "#{i}"
+        resp.write "#{i.price}"
       end
     else
       resp.write "Route not found"
