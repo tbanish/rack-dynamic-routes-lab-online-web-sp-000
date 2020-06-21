@@ -8,7 +8,7 @@ class Application
       @@items.each do |i|
         if @@items.include?(i)
           resp.write "#{i.price}"
-        else
+        elsif !@@items.include?(i)
           resp.write "Item not found"
           resp.status = 400
         end
