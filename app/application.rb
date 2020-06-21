@@ -9,7 +9,7 @@ class Application
         resp.write "#{i}"
       end
     else
-      
+      resp.write
     end
   end
   
