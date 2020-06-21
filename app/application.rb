@@ -1,7 +1,7 @@
 class Application
   
   def call(env)
-    if path.matc/item/
+    if path.match(/items/)
     
   end
   
