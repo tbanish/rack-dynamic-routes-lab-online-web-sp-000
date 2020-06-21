@@ -1,7 +1,7 @@
 class Application
   
   def call(env)
-    if path.match(/items/)
+    if req.path.match(/items/)
     
   end
   
