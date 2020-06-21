@@ -9,8 +9,10 @@ class Application
         resp.write "#{i}"
       end
     else
-      resp.write
+      resp.write "Route not found"
+      resp.status = 404
     end
+    resp.finish
   end
   
 end
